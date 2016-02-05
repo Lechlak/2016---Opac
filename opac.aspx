@@ -24,7 +24,7 @@
             Dim pTitleCk As String = ""
             Dim intCount As Integer = 0
             
-            Response.Write("<div id=owl-demo>")
+            Response.Write("<div id=owl-demo class=owl-carousel owl-theme>")
 
 
             For Each node As XmlNode In nodes
@@ -68,16 +68,14 @@
 
 
     <!-- Important Owl stylesheet -->
-    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
-     
-    <!-- Default Theme -->
-    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="owl.carousel.css">
+
      
     <!--  jQuery 1.7+  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
      
     <!-- Include js plugin -->
-    <script src="assets/owl-carousel/owl.carousel.js"></script>
+    <script src="owl.carousel.js"></script>
 
 
 <script>
@@ -85,23 +83,15 @@
 
     $(document).ready(function() {
      
-      var owl = $("#owl-demo");
+      //var owl = $("#owl-demo");
      
-      owl.owlCarousel({
-         
-          itemsCustom : [
-            [0, 2],
-            [450, 4],
-            [600, 7],
-            [700, 9],
-            [1000, 10],
-            [1200, 12],
-            [1400, 13],
-            [1600, 15]
-          ],
-          navigation : false
-     
-      });
+      $('.owl-carousel').owlCarousel({
+    	margin:10,
+	    loop:true,
+    	autoWidth:true,
+	    items:4,
+	    autoplay:true
+		})
      
     });
 
@@ -110,52 +100,11 @@
                                    
 </head>
 <body>
+<div id="header"><img src="logo.png" /> WEEKLY STAFF PICKS </div>
     <form id="form1" runat="server">
     <div>
         
     </div>
     </form>
-    <style>
-    
-
-    #owl-demo .item{
-        background: #42bdc2;
-        padding: 30px 0px;
-        margin: 5px;
-        color: #FFF;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        text-align: center;
-    }
-
-
-</style>
-
-
-    <div id="owl-demo" class="owl-carousel owl-theme">
-  <div class="item"><h1>1</h1></div>
-  <div class="item"><h1>2</h1></div>
-  <div class="item"><h1>3</h1></div>
-  <div class="item"><h1>4</h1></div>
-  <div class="item"><h1>5</h1></div>
-  <div class="item"><h1>6</h1></div>
-  <div class="item"><h1>7</h1></div>
-  <div class="item"><h1>8</h1></div>
-  <div class="item"><h1>9</h1></div>
-  <div class="item"><h1>10</h1></div>
-  <div class="item"><h1>11</h1></div>
-  <div class="item"><h1>12</h1></div>
-  <div class="item"><h1>13</h1></div>
-  <div class="item"><h1>14</h1></div>
-  <div class="item"><h1>15</h1></div>
-  <div class="item"><h1>16</h1></div>
-  <div class="item"><h1>17</h1></div>
-  <div class="item"><h1>18</h1></div>
-  <div class="item"><h1>19</h1></div>
-  <div class="item"><h1>20</h1></div>
-</div>
-
-
 </body>
 </html>
